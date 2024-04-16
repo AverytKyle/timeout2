@@ -23,7 +23,9 @@ slowPrintSum(2, 8); // prints '10' after 500 ms
 ***********************************************************************/
 
 function postponeWithArgs(cb, delay) {
-  // Your code here 
+  return function (...arg) {
+    return setTimeout(cb, delay, ...arg)
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
